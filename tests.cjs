@@ -29,7 +29,7 @@ for (const bad of [[], [0,1,2], [0,1,2,3,0,null], [0,1,2,3,0,4]]) {
 }
 const html = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
 for (const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)) {
-  if (!/^https?:/.test(match[1])) assert.ok(fs.existsSync(path.join(__dirname, match[1])), match[1]);
+  if (!/^https?:/.test(match[1])) assert.ok(fs.existsSync(path.join(__dirname, match[1].split('?')[0])), match[1]);
 }
 for(const match of fs.readFileSync(path.join(__dirname,'styles.css'),'utf8').matchAll(/url\('([^']+)'\)/g)) assert.ok(fs.existsSync(path.join(__dirname,match[1])));
 assert.ok(!html.includes('tildacdn.com'));

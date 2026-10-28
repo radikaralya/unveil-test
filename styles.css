@@ -414,3 +414,8 @@
                                                                                                                                                                                                             animation:none!important;
                                                                                                                                                                                                             transition:none!important}
                                                                                                                                                                                                           }
+
+/* Vector arrows keep the same appearance on iOS and Android. */
+.uv .uv__arrow { display:inline-block; flex:0 0 20px; width:20px; height:20px; vertical-align:middle; }
+.uv .uv__return { display:inline-flex; align-items:center; gap:18px; }
+.uv .uv__button-text { display:inline-flex; align-items:center; gap:12px; }

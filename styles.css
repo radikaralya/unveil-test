@@ -1,0 +1,416 @@
+@font-face{
+  font-family:Angst;
+  src:url('assets/angst.woff') format('woff');
+  font-display:swap}
+  @font-face{
+    font-family:Manrope;
+    src:url('assets/manrope.ttf') format('truetype');
+    font-display:swap}
+    @font-face{
+      font-family:'Cormorant Garamond';
+      src:url('assets/cormorant-italic.ttf') format('truetype');
+      font-style:italic;
+      font-display:swap}
+      html{
+        background:#000}
+        body{
+          margin:0;
+          background:#000}
+          .uv,.uv *{
+            box-sizing:border-box}
+            .uv input,.uv textarea,.uv select{
+              font:inherit}
+              .uv{
+                --uv-title-font:'Angst','Times New Roman',serif;
+                --uv-text-font:'Manrope',Arial,sans-serif;
+                background:#000;
+                color:#f5f5f2;
+                font-family:var(--uv-text-font);
+                min-height:100svh;
+                padding:36px clamp(22px,5.7vw,88px) 24px;
+                display:flex;
+                flex-direction:column;
+                font-size:16px;
+                line-height:1.55;
+                color-scheme:dark}
+                .uv [hidden]{
+                  display:none!important}
+                  .uv a{
+                    color:inherit;
+                    text-decoration:none}
+                    .uv button{
+                      font-family:var(--uv-text-font);
+                      cursor:pointer}
+                      .uv button:disabled{
+                        cursor:default;
+                        opacity:.32}
+                        .uv button:focus-visible,.uv a:focus-visible{
+                          outline:2px solid white;
+                          outline-offset:7px}
+                          .uv h1:focus,.uv h2:focus,.uv legend:focus{
+                            outline:none}
+                            .uv__header{
+                              display:flex;
+                              align-items:center;
+                              justify-content:space-between;
+                              gap:24px}
+                              .uv__logo{
+                                font-family:var(--uv-title-font);
+                                font-size:34px;
+                                line-height:1}
+                                .uv__return{
+                                  font-size:13px}
+                                  .uv__return span{
+                                    margin-left:18px;
+                                    font-size:20px}
+                                    .uv__stage{
+                                      flex:1;
+                                      display:flex;
+                                      align-items:center;
+                                      width:100%;
+                                      min-height:660px;
+                                      padding:58px 0}
+                                      .uv__intro{
+                                        position:relative;
+                                        display:grid;
+                                        grid-template-columns:1.15fr 1fr;
+                                        align-items:center;
+                                        gap:24px;
+                                        width:100%}
+                                        .uv__intro-copy{
+                                          position:relative;
+                                          z-index:1}
+                                          .uv__eyebrow{
+                                            font-size:12px;
+                                            color:#bdbdbd;
+                                            margin:0 0 32px}
+                                            .uv__title{
+                                              font-family:var(--uv-title-font);
+                                              font-weight:400;
+                                              font-size:clamp(48px,5.8vw,88px);
+                                              line-height:1.06;
+                                              letter-spacing:-.025em;
+                                              margin:0 0 36px;
+                                              text-wrap:balance;
+                                              text-transform:uppercase}
+                                              .uv__title em{
+                                                font-family:'Cormorant Garamond',Georgia,serif;
+                                                font-style:italic;
+                                                text-transform:none;
+                                                font-size:1.05em;
+                                                letter-spacing:0}
+                                                .uv__lead{
+                                                  max-width:430px;
+                                                  font-size:17px;
+                                                  line-height:1.6;
+                                                  margin:0 0 36px}
+                                                  .uv__primary{
+                                                    display:inline-flex;
+                                                    align-items:center;
+                                                    justify-content:center;
+                                                    min-height:52px;
+                                                    padding:15px 25px;
+                                                    border:1px solid #f5f5f2;
+                                                    background:#f5f5f2;
+                                                    color:#000!important;
+                                                    font-size:14px;
+                                                    font-weight:600;
+                                                    border-radius:0;
+                                                    transition:background .2s,color .2s}
+                                                    .uv__primary:hover:not(:disabled){
+                                                      background:#000;
+                                                      color:white!important}
+                                                      .uv__primary .uv__button-text{
+                                                        display:flex;
+                                                        gap:35px;
+                                                        align-items:center}
+                                                        .uv__small{
+                                                          font-size:12px;
+                                                          color:#aaa;
+                                                          margin:16px 0 0}
+                                                          .uv__art{
+                                                            height:520px;
+                                                            display:flex;
+                                                            align-items:center;
+                                                            justify-content:center}
+                                                            .uv__stone{
+                                                              width:100%;
+                                                              height:100%;
+                                                              object-fit:contain;
+                                                              animation:uv-drift 10s ease-in-out infinite alternate}
+                                                              .uv__footer{
+                                                                border-top:1px solid #303030;
+                                                                padding-top:20px;
+                                                                display:flex;
+                                                                justify-content:space-between;
+                                                                gap:20px;
+                                                                font-size:11px;
+                                                                color:#aaa}
+                                                                .uv__footer span:last-child{
+                                                                  max-width:330px;
+                                                                  text-align:right}
+                                                                  .uv__quiz{
+                                                                    width:100%;
+                                                                    max-width:920px;
+                                                                    margin:auto;
+                                                                    animation:uv-appear .35s ease-out}
+                                                                    .uv__meta{
+                                                                      display:flex;
+                                                                      justify-content:space-between;
+                                                                      gap:18px;
+                                                                      font-size:12px;
+                                                                      color:#bdbdbd}
+                                                                      .uv__progress{
+                                                                        display:flex;
+                                                                        gap:8px;
+                                                                        margin:18px 0 42px}
+                                                                        .uv__progress span{
+                                                                          height:2px;
+                                                                          background:#343434;
+                                                                          flex:1}
+                                                                          .uv__progress .uv__segment--done{
+                                                                            background:#f5f5f2}
+                                                                            .uv__fieldset{
+                                                                              padding:0;
+                                                                              border:0;
+                                                                              margin:0;
+                                                                              min-width:0}
+                                                                              .uv__question{
+                                                                                font-family:var(--uv-title-font);
+                                                                                font-size:clamp(30px,3.4vw,48px);
+                                                                                line-height:1.17;
+                                                                                text-wrap:balance;
+                                                                                max-width:840px;
+                                                                                padding:0;
+                                                                                margin-bottom:32px}
+                                                                                .uv__options{
+                                                                                  display:grid;
+                                                                                  grid-template-columns:1fr 1fr;
+                                                                                  gap:12px}
+                                                                                  .uv__option{
+                                                                                    display:flex;
+                                                                                    align-items:center;
+                                                                                    gap:18px;
+                                                                                    border:1px solid #444;
+                                                                                    min-height:100px;
+                                                                                    padding:22px;
+                                                                                    cursor:pointer;
+                                                                                    position:relative;
+                                                                                    transition:background .2s,border-color .2s}
+                                                                                    .uv__option:hover{
+                                                                                      border-color:#ddd;
+                                                                                      background:#101010}
+                                                                                      .uv__option:has(input:checked){
+                                                                                        border-color:white;
+                                                                                        background:#f5f5f2;
+                                                                                        color:#000}
+                                                                                        .uv__option:has(input:focus-visible){
+                                                                                          outline:2px solid white;
+                                                                                          outline-offset:4px}
+                                                                                          .uv__option input{
+                                                                                            position:absolute;
+                                                                                            width:1px;
+                                                                                            height:1px;
+                                                                                            opacity:0}
+                                                                                            .uv__letter{
+                                                                                              font-size:12px;
+                                                                                              flex:0 0 26px;
+                                                                                              width:26px;
+                                                                                              height:26px;
+                                                                                              border:1px solid #777;
+                                                                                              border-radius:50%;
+                                                                                              display:grid;
+                                                                                              place-items:center}
+                                                                                              .uv__option-text{
+                                                                                                font-size:14px;
+                                                                                                line-height:1.6}
+                                                                                                .uv__navigation{
+                                                                                                  margin-top:32px;
+                                                                                                  display:flex;
+                                                                                                  justify-content:space-between;
+                                                                                                  align-items:center;
+                                                                                                  gap:16px}
+                                                                                                  .uv__back{
+                                                                                                    padding:12px 0;
+                                                                                                    background:transparent;
+                                                                                                    border:0;
+                                                                                                    border-bottom:1px solid transparent;
+                                                                                                    border-radius:0;
+                                                                                                    color:#ddd;
+                                                                                                    font-size:13px;
+                                                                                                    min-height:44px}
+                                                                                                    .uv__back:hover{
+                                                                                                      border-bottom-color:#ddd}
+                                                                                                      .uv__result{
+                                                                                                        display:grid;
+                                                                                                        grid-template-columns:.85fr 1.15fr;
+                                                                                                        gap:clamp(36px,7vw,100px);
+                                                                                                        width:100%;
+                                                                                                        align-items:center;
+                                                                                                        animation:uv-appear .5s ease-out}
+                                                                                                        .uv__result-art{
+                                                                                                          height:480px;
+                                                                                                          display:flex;
+                                                                                                          align-items:center;
+                                                                                                          justify-content:center}
+                                                                                                          .uv__symbol{
+                                                                                                            height:100%;
+                                                                                                            width:100%;
+                                                                                                            object-fit:contain}
+                                                                                                            .uv__result-title{
+                                                                                                              font-family:var(--uv-title-font);
+                                                                                                              font-size:clamp(40px,4vw,64px);
+                                                                                                              font-weight:400;
+                                                                                                              line-height:1.06;
+                                                                                                              text-transform:uppercase;
+                                                                                                              margin:0 0 20px;
+                                                                                                              text-wrap:balance}
+                                                                                                              .uv__tagline{
+                                                                                                                font-family:var(--uv-title-font);
+                                                                                                                font-size:27px;
+                                                                                                                line-height:1.2;
+                                                                                                                margin:0 0 28px}
+                                                                                                                .uv__description p{
+                                                                                                                  font-size:14px;
+                                                                                                                  line-height:1.8;
+                                                                                                                  margin:0 0 16px;
+                                                                                                                  max-width:65ch}
+                                                                                                                  .uv__discussion{
+                                                                                                                    border-top:1px solid #444;
+                                                                                                                    margin-top:26px;
+                                                                                                                    padding-top:8px}
+                                                                                                                    .uv__discussion-text{
+                                                                                                                      font-size:18px;
+                                                                                                                      line-height:1.5;
+                                                                                                                      margin:12px 0 20px}
+                                                                                                                      .uv__note{
+                                                                                                                        font-size:12px;
+                                                                                                                        color:#aaa;
+                                                                                                                        line-height:1.7}
+                                                                                                                        .uv__result-actions{
+                                                                                                                          display:flex;
+                                                                                                                          flex-wrap:wrap;
+                                                                                                                          align-items:center;
+                                                                                                                          gap:24px;
+                                                                                                                          margin-top:28px}
+                                                                                                                          @keyframes uv-drift{
+                                                                                                                            from{
+                                                                                                                              transform:translateY(-6px) rotate(-2deg)}
+                                                                                                                              to{
+                                                                                                                                transform:translateY(6px) rotate(2deg)}
+                                                                                                                              }
+                                                                                                                              @keyframes uv-appear{
+                                                                                                                                from{
+                                                                                                                                  opacity:.5;
+                                                                                                                                  transform:translateY(8px)}
+                                                                                                                                  to{
+                                                                                                                                    opacity:1;
+                                                                                                                                    transform:translateY(0)}
+                                                                                                                                  }
+                                                                                                                                  @media(min-width:960px) and (max-width:1200px){
+                                                                                                                                    .uv__title{
+                                                                                                                                      font-size:64px}
+                                                                                                                                      .uv__art{
+                                                                                                                                        height:440px}
+                                                                                                                                        .uv__stage{
+                                                                                                                                          min-height:650px}
+                                                                                                                                        }
+                                                                                                                                        @media(min-width:640px) and (max-width:960px){
+                                                                                                                                          .uv__intro{
+                                                                                                                                            grid-template-columns:1.2fr .8fr;
+                                                                                                                                            gap:0}
+                                                                                                                                            .uv__title{
+                                                                                                                                              font-size:52px}
+                                                                                                                                              .uv__art{
+                                                                                                                                                height:360px}
+                                                                                                                                                .uv__lead{
+                                                                                                                                                  font-size:15px}
+                                                                                                                                                  .uv__result{
+                                                                                                                                                    grid-template-columns:.7fr 1.3fr;
+                                                                                                                                                    gap:28px}
+                                                                                                                                                    .uv__result-art{
+                                                                                                                                                      height:320px}
+                                                                                                                                                      .uv__stage{
+                                                                                                                                                        min-height:620px}
+                                                                                                                                                      }
+                                                                                                                                                      @media(max-width:640px){
+                                                                                                                                                        .uv{
+                                                                                                                                                          padding-top:25px}
+                                                                                                                                                          .uv__logo{
+                                                                                                                                                            font-size:28px}
+                                                                                                                                                            .uv__return{
+                                                                                                                                                              font-size:11px}
+                                                                                                                                                              .uv__stage{
+                                                                                                                                                                min-height:0;
+                                                                                                                                                                padding:42px 0;
+                                                                                                                                                                align-items:flex-start}
+                                                                                                                                                                .uv__intro{
+                                                                                                                                                                  display:flex;
+                                                                                                                                                                  flex-direction:column;
+                                                                                                                                                                  gap:0;
+                                                                                                                                                                  align-items:stretch}
+                                                                                                                                                                  .uv__art{
+                                                                                                                                                                    order:-1;
+                                                                                                                                                                    height:230px;
+                                                                                                                                                                    margin:-10px 0 24px}
+                                                                                                                                                                    .uv__title{
+                                                                                                                                                                      font-size:clamp(38px,8vw,52px);
+                                                                                                                                                                      margin-bottom:24px}
+                                                                                                                                                                      .uv__eyebrow{
+                                                                                                                                                                        margin-bottom:22px;
+                                                                                                                                                                        font-size:11px}
+                                                                                                                                                                        .uv__lead{
+                                                                                                                                                                          font-size:14px;
+                                                                                                                                                                          margin-bottom:26px;
+                                                                                                                                                                          max-width:36ch}
+                                                                                                                                                                          .uv__primary{
+                                                                                                                                                                            min-height:50px}
+                                                                                                                                                                            .uv__footer{
+                                                                                                                                                                              flex-direction:column;
+                                                                                                                                                                              gap:8px;
+                                                                                                                                                                              font-size:10px}
+                                                                                                                                                                              .uv__footer span:last-child{
+                                                                                                                                                                                text-align:left;
+                                                                                                                                                                                max-width:300px}
+                                                                                                                                                                                .uv__options{
+                                                                                                                                                                                  grid-template-columns:1fr;
+                                                                                                                                                                                  gap:10px}
+                                                                                                                                                                                  .uv__option{
+                                                                                                                                                                                    min-height:74px;
+                                                                                                                                                                                    padding:16px;
+                                                                                                                                                                                    gap:15px}
+                                                                                                                                                                                    .uv__question{
+                                                                                                                                                                                      font-size:30px;
+                                                                                                                                                                                      margin-bottom:26px}
+                                                                                                                                                                                      .uv__progress{
+                                                                                                                                                                                        margin-bottom:32px}
+                                                                                                                                                                                        .uv__meta{
+                                                                                                                                                                                          font-size:11px}
+                                                                                                                                                                                          .uv__result{
+                                                                                                                                                                                            display:flex;
+                                                                                                                                                                                            flex-direction:column;
+                                                                                                                                                                                            gap:24px}
+                                                                                                                                                                                            .uv__result-art{
+                                                                                                                                                                                              height:230px;
+                                                                                                                                                                                              width:100%}
+                                                                                                                                                                                              .uv__result-title{
+                                                                                                                                                                                                font-size:42px}
+                                                                                                                                                                                                .uv__result-actions{
+                                                                                                                                                                                                  gap:18px}
+                                                                                                                                                                                                  .uv__result-actions .uv__primary{
+                                                                                                                                                                                                    font-size:12px;
+                                                                                                                                                                                                    padding:14px 18px}
+                                                                                                                                                                                                  }
+                                                                                                                                                                                                  @media(min-width:480px) and (max-width:640px){
+                                                                                                                                                                                                    .uv__art{
+                                                                                                                                                                                                      height:280px}
+                                                                                                                                                                                                      .uv__question{
+                                                                                                                                                                                                        font-size:36px}
+                                                                                                                                                                                                        .uv__option{
+                                                                                                                                                                                                          min-height:78px}
+                                                                                                                                                                                                        }
+                                                                                                                                                                                                        @media(prefers-reduced-motion:reduce){
+                                                                                                                                                                                                          .uv *{
+                                                                                                                                                                                                            animation:none!important;
+                                                                                                                                                                                                            transition:none!important}
+                                                                                                                                                                                                          }

@@ -1,0 +1,10 @@
+{
+  "name": "unveil-symbol-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Самостоятельный тест UNVEIL на HTML, CSS и JavaScript",
+  "scripts": {
+    "test": "node tests.cjs",
+    "start": "python3 -m http.server 8000"
+  }
+}
